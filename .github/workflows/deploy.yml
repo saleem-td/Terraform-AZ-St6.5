@@ -40,6 +40,7 @@ jobs:
        az vmss extension set \
         --resource-group ${{ secrets.RESOURCE_GROUP }} \
         --vmss-name ${{ secrets.VMSS_NAME }} \
+        --name                   customScript \
         --publisher Microsoft.Azure.Extensions \
         --version 2.1 \
         --settings '{"commandToExecute": "/home/azureuser/Terraform-AZ-St6.5/update_app.sh"}' \
