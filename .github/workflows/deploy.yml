@@ -42,7 +42,6 @@ jobs:
         --vmss-name ${{ secrets.VMSS_NAME }} \
         --name CustomScript \
         --publisher Microsoft.Azure.Extensions \
-        --type CustomScript \
         --type-handler-version 2.1 \
         --settings '{"commandToExecute": "/home/azureuser/Terraform-AZ-St6.5/update_app.sh"}' \
         --force-update
